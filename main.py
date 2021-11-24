@@ -1,11 +1,13 @@
-from flask import Flask
+from flask import Flask,render_template
 from datetime import datetime
 app=Flask(__name__)#本地端
 
 #建立router
 @app.route('/')
 def index():
-    return 'Hello!,Calvin'
+    name = 'Calvin'
+    time=today()
+    return render_template('index.html', **locals())
 
 @app.route('/today')
 def today():
