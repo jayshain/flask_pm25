@@ -5,10 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM25</title>
+    <!-- css -->
+    <style>
+            body{
+                /* background-color:antiquewhite; */
+                text-align: center;    
+            }
+            table{
+                width: 80%;
+                margin: auto;
+            }
+            thead {
+                background-color: violet;
+                color: whitesmoke;
+                padding: 12px;
+            }
+            h2{
+                background-color: crimson;
+                color: white;
+            }
+
+    </style>
 </head>
 <body>
     <h1>PM25 每日均值</h1>
+    <h2>PM25濃度最高 {{result_sort.0}} {{result_sort.1}}</h2>
     {{time}}
+    <form action="" method="POST">
+        帳號
+        <input type="text">
+        密碼
+        <input type="password">
+        email
+        <input type="email">
+        
+        <input type="submit" name="update" value="更新">
+        <input type="submit" name="sort" value="排序">
+
+    </form>
+ 
     <!-- html表格 -->
     <table border="1">
         <thead>
